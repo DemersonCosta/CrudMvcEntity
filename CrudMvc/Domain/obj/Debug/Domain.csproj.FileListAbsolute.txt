@@ -1,0 +1,6 @@
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Domain\bin\Debug\Domain.dll
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Domain\bin\Debug\Domain.pdb
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Domain\obj\Debug\Domain.dll
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Domain\obj\Debug\Domain.pdb

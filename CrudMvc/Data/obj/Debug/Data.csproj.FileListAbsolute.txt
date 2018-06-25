@@ -1,0 +1,13 @@
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\bin\Debug\Data.dll.config
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\bin\Debug\Data.dll
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\bin\Debug\Data.pdb
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\bin\Debug\Domain.dll
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\bin\Debug\EntityFramework.dll
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\bin\Debug\Domain.pdb
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\bin\Debug\EntityFramework.xml
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\obj\Debug\Data.dll
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvc\Data\obj\Debug\Data.pdb
