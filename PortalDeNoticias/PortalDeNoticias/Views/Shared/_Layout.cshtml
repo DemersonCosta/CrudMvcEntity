@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Portal de noticias </title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Portal de noticias</h1>
+        </div>
+
+
+        <div class="navbar navbar-inverse ">
+            <div class="container">
+                <div class="navbar-header">
+                    @Html.ActionLink("Noticias", "Index", "Noticias", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <p class="panel-title">Buscar notícias</p>
+                    </div>
+                    <div class="panel-body">
+                        @using (Html.BeginForm("Buscar", "Noticias", FormMethod.Get))
+                        {
+                            <input type="text" class="form-control" name="texto" placeholder="Bucar por..." />
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr />
+
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Demerson Costa</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
