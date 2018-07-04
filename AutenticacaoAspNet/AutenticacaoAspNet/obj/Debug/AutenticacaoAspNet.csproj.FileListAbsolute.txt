@@ -33,3 +33,6 @@ C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvcEntity\AutenticacaoAsp
 C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvcEntity\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.csproj.CoreCompileInputs.cache
 C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvcEntity\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.dll
 C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvcEntity\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.pdb
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvcEntity\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.Migrations.InitialCreate.resources
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvcEntity\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.csproj.GenerateResource.Cache
+C:\Users\demerson.ferreira\Desktop\Projetos Entity\CrudMvcEntity\AutenticacaoAspNet\AutenticacaoAspNet\obj\Debug\AutenticacaoAspNet.Migrations.CriaTipoUsuario.resources

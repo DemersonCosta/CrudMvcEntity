@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace AutenticacaoAspNet.Models
 {
+    //Enable-Migrations
+    //add-Migration
+    // Update-database
     [Table("Usuarios")]
     public class Usuario
     {
@@ -23,5 +22,7 @@ namespace AutenticacaoAspNet.Models
         [Required]
         [MaxLength(100)]
         public string Senha { get; set; }
+
+        public TipoUsuario Tipo { get; set; } = TipoUsuario.Padrão;
     }
 }

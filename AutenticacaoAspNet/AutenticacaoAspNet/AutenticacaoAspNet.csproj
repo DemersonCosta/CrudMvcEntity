@@ -132,12 +132,24 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AutenticacaoController.cs" />
+    <Compile Include="Controllers\CadastroUsuariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PainelController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
+    <Compile Include="Filters\AutorizacaoTipo.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806281452542_InitialCreate.cs" />
+    <Compile Include="Migrations\201806281452542_InitialCreate.Designer.cs">
+      <DependentUpon>201806281452542_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807041339315_CriaTipoUsuario.cs" />
+    <Compile Include="Migrations\201807041339315_CriaTipoUsuario.Designer.cs">
+      <DependentUpon>201807041339315_CriaTipoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\TipoUsuario.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\UsuariosContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,6 +173,7 @@
     <Content Include="Views\Painel\Mensagens.cshtml" />
     <Content Include="Views\Painel\Index.cshtml" />
     <Content Include="Views\Perfil\AlterarSenha.cshtml" />
+    <Content Include="Views\CadastroUsuarios\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -170,6 +183,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201806281452542_InitialCreate.resx">
+      <DependentUpon>201806281452542_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807041339315_CriaTipoUsuario.resx">
+      <DependentUpon>201807041339315_CriaTipoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
