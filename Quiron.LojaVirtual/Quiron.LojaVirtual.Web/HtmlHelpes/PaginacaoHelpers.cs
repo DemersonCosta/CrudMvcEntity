@@ -8,16 +8,17 @@ namespace Quiron.LojaVirtual.Web.HtmlHelpes
     public static class PaginacaoHelpers
     {
 
-        public static MvcHtmlString PageLinks(this HtmlHelper html, Paginacao paginacao, Func<int, string> paginaUrl)
+        public static MvcHtmlString PageLinks(this HtmlHelper html, Paginacao paginacaoInfo, Func<int, string> paginaUrl)
         {
             StringBuilder resultado = new StringBuilder();
 
-            for (int i = 1; i < paginacao.TotalPagina; i++)
+            for (int i = 1; i <= paginacaoInfo.TotalPaginas; i++)
             {
                 TagBuilder tag = new TagBuilder("a");
                 tag.MergeAttribute("href", paginaUrl(i));
                 tag.InnerHtml = i.ToString();
-                if (i == paginacao.PaginaAtual)
+
+                if (i == paginacaoInfo.PaginaAtual)
                 {
                     tag.AddCssClass("selected");
                     tag.AddCssClass("btn-primary");
@@ -25,7 +26,6 @@ namespace Quiron.LojaVirtual.Web.HtmlHelpes
                 tag.AddCssClass("btn btn-default");
                 resultado.Append(tag);
             }
-
             return MvcHtmlString.Create(resultado.ToString());
         }
     }
