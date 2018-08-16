@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Mail;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Quiron.LojaVirtual.Dominio.Entidades
 {
@@ -37,26 +33,26 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
 
                 StringBuilder body = new StringBuilder()
                     .AppendLine("Novo Pedido")
-                    .AppendLine("-----------")
-                    .AppendLine("Itens");
+                    .AppendLine("\n-----------")
+                    .AppendLine("\nItens");
 
                 foreach (var item in carrinho.ItensCarrinho)
                 {
                     var subtotal = item.Produto.Preco * item.Quantidade;
-                    body.AppendFormat("{0} X {1} (subtotal: {2:c})", 
+                    body.AppendFormat("{0} X {1} Total: {2:c}", 
                         item.Quantidade, item.Produto, item.Produto.Nome, subtotal);
                 }
 
-                body.AppendFormat("Valor total do pedido: {0:c}", carrinho.ObterValorTotal())
-                    .AppendLine("-----------------------")
-                    .AppendLine("Enviar para:")
+                body.AppendFormat("\nValor total do pedido: {0:c}", carrinho.ObterValorTotal())
+                    .AppendLine("\n-----------------------")
+                    .AppendLine("\nEnviar para:")
                     .AppendLine(pedido.NomeCliente)
                     .AppendLine(pedido.Email)
                     .AppendLine(pedido.Endereco ?? "")
                     .AppendLine(pedido.Cidade ?? "")
                     .AppendLine(pedido.Complemento ?? "")
-                    .AppendLine("----------------------")
-                    .AppendFormat("Para presente? : {0}", pedido.EmbrulhaPresente ? "Sim" : "Não");
+                    .AppendLine("\n----------------------")
+                    .AppendFormat("\nPara presente? : {0}", pedido.EmbrulhaPresente ? "Sim" : "Não");
 
                 MailMessage mailMessage = new MailMessage(
                     _emailConfiguracoes.De,
