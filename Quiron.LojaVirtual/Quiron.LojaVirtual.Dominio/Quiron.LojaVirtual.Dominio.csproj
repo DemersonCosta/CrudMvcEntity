@@ -72,14 +72,30 @@
     <Compile Include="Entidades\GmailEmailService.cs" />
     <Compile Include="Entidades\Pedido.cs" />
     <Compile Include="Entidades\Produto.cs" />
+    <Compile Include="Migrations\201809030106293_InitialCreate.cs" />
+    <Compile Include="Migrations\201809030106293_InitialCreate.Designer.cs">
+      <DependentUpon>201809030106293_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809122025219_AddProdutosRe.cs" />
+    <Compile Include="Migrations\201809122025219_AddProdutosRe.Designer.cs">
+      <DependentUpon>201809122025219_AddProdutosRe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\EfDbContext.cs" />
     <Compile Include="Repositorio\ProdutosRepositorio.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809030106293_InitialCreate.resx">
+      <DependentUpon>201809030106293_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809122025219_AddProdutosRe.resx">
+      <DependentUpon>201809122025219_AddProdutosRe.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

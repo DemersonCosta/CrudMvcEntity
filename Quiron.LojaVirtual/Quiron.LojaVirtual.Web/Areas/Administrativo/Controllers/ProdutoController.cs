@@ -28,5 +28,59 @@ namespace Quiron.LojaVirtual.Web.Areas.Administrativo.Controllers
 
             return View(produto);
         }
+        [HttpPost]
+        public ActionResult Alterar(Produto produto)
+        {
+            if (ModelState.IsValid)
+            {
+                _repositorio = new ProdutosRepositorio();
+                _repositorio.Salvar(produto);
+
+                TempData["mensagem"] = string.Format("{0} foi salvo com sucesso", produto.Nome);
+
+                return RedirectToAction("Index");
+
+            }
+            return View(produto);
+        }
+
+        public ViewResult NovoProduto()
+        {
+
+            return View("Alterar", new Produto());
+        }
+
+        //[HttpPost]
+        //public ActionResult Excluir(int produtoId)
+        //{
+        //    _repositorio = new ProdutosRepositorio();
+
+        //    Produto prod = _repositorio.Excluir(produtoId);
+
+        //    if (prod != null)
+        //    {
+        //        TempData["mensagem"] = string.Format("{0} foi excluido com sucesso",prod.Nome);
+        //    }
+        //    return RedirectToAction("Index");
+        //}
+
+        [HttpPost]
+        public JsonResult Excluir(int produtoId)
+        {
+
+            // System.Threading.Thread.Sleep(TimeSpan.FromSeconds(5));
+
+            string mensagem = string.Empty;
+
+            _repositorio = new ProdutosRepositorio();
+
+            Produto prod = _repositorio.Excluir(produtoId);
+
+            if (prod != null)
+            {
+                mensagem = string.Format("{0} foi excluido com sucesso", prod.Nome);
+            }
+            return Json(mensagem,JsonRequestBehavior.AllowGet);
+        }
     }
 }

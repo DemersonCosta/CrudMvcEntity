@@ -19,7 +19,7 @@ namespace Quiron.LojaVirtual.Web.Controllers
         {
             _repositorio = new ProdutosRepositorio();
 
-            ProdutoViewModel model = new ProdutoViewModel
+            ProdutosViewModel model = new ProdutosViewModel
             {
 
                 Produtos = _repositorio.Produtos

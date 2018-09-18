@@ -1,6 +1,6 @@
-﻿using Quiron.LojaVirtual.Dominio.Entidades;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using Quiron.LojaVirtual.Dominio.Entidades;
 
 namespace Quiron.LojaVirtual.Dominio.Repositorio
 {
@@ -8,9 +8,13 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
     {
         public DbSet<Produto> Produtos { get; set; }
 
-        public EfDbContext()
-        { 
-            // Mostrar no log a instrução
+        public EfDbContext() : base("QuironDatabase")
+        {
+            //Database.SetInitializer<EfDbContext>(
+            //  new CreateDatabaseIfNotExists<EfDbContext>());
+            //Database.Initialize(false);
+
+            //Mostrar no log a instrução
             //Database.Log = instrucao => System.Diagnostics.Debug.WriteLine(instrucao);
         }
 
@@ -18,8 +22,6 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Produto>().ToTable("Produtos");
-           
-            
         }
 
     }

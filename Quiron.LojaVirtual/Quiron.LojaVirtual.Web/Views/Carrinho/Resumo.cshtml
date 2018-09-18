@@ -5,7 +5,7 @@
     @Html.ActionLink("Checkaut", "Index", "Carrinho", new { returnUrl = Request.Url.PathAndQuery}, new {@class = "btn btn-default navbar-btn"})
 </div>
 
-<div class=" navbar-text navbar-right">
+<div class=" navbar-text navbar-right" style="margin-right:15px">
     <b>Seus produtos:</b>
     @Model.ItensCarrinho.Sum(x => x.Quantidade) iten(s), @Model.ObterValorTotal().ToString("c")
 </div>
