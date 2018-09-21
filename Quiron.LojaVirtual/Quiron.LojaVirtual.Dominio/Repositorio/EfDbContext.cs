@@ -7,6 +7,7 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
     public class EfDbContext : DbContext
     {
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Administrador> Administradores { get; set; }
 
         public EfDbContext() : base("QuironDatabase")
         {
@@ -22,6 +23,7 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Produto>().ToTable("Produtos");
+            modelBuilder.Entity<Administrador>().ToTable("Administradores");
         }
 
     }
