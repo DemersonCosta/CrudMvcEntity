@@ -30,6 +30,8 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
                     prod.Descricao = produto.Descricao;
                     prod.Preco = produto.Preco;
                     prod.Categoria = produto.Categoria;
+                    prod.Imagem = produto.Imagem;
+                    prod.ImagemMimeType = produto.ImagemMimeType;
                 }
 
             }
@@ -44,7 +46,7 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
             if (prod != null)
             {
                 _context.Produtos.Remove(prod);
-               // _context.SaveChanges();
+               _context.SaveChanges();
             }
 
             return (prod);

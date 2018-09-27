@@ -1,6 +1,7 @@
 ﻿using Quiron.LojaVirtual.Dominio.Entidades;
 using Quiron.LojaVirtual.Dominio.Repositorio;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Quiron.LojaVirtual.Web.Areas.Administrativo.Controllers
@@ -28,10 +29,16 @@ namespace Quiron.LojaVirtual.Web.Areas.Administrativo.Controllers
             return View(produto);
         }
         [HttpPost]
-        public ActionResult Alterar(Produto produto)
+        public ActionResult Alterar(Produto produto, HttpPostedFileBase image = null)
         {
             if (ModelState.IsValid)
             {
+                if (image != null)
+                {
+                    produto.ImagemMimeType = image.ContentType;
+                    produto.Imagem = new byte[image.ContentLength];
+                    image.InputStream.Read(produto.Imagem, 0, image.ContentLength);
+                }
                 _repositorio = new ProdutosRepositorio();
                 _repositorio.Salvar(produto);
 
@@ -80,6 +87,20 @@ namespace Quiron.LojaVirtual.Web.Areas.Administrativo.Controllers
                 mensagem = string.Format("{0} foi excluido com sucesso", prod.Nome);
             }
             return Json(mensagem,JsonRequestBehavior.AllowGet);
+        }
+
+        public FileContentResult ObterImagem(int produtoId)
+        {
+            _repositorio = new ProdutosRepositorio();
+            Produto prod = _repositorio.Produtos
+                .FirstOrDefault(p => p.ProdutoId == produtoId);
+
+            if (prod != null)
+            {
+                return File(prod.Imagem, prod.ImagemMimeType);
+            }
+
+            return null;
         }
     }
 }
