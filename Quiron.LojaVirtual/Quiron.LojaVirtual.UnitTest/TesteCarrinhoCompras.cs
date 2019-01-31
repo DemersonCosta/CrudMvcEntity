@@ -1,10 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Quiron.LojaVirtual.Dominio.Entidades;
-using System;
-using System.Collections.Generic;
+using Quiron.LojaVirtual.Web.Controllers;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Quiron.LojaVirtual.UnitTest
 {
@@ -54,6 +51,6 @@ namespace Quiron.LojaVirtual.UnitTest
 
             Assert.AreEqual(resultado.Length, 2);
 
-        }
+        } 
     }
 }
